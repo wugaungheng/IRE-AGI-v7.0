@@ -1,0 +1,72 @@
+IRE-AGI v7.0 开源合规报告
+Open Source Compliance Report
+================================
+
+生成时间 | Generation Time: 2026-06-25 12:56:08
+
+一、文件清单 | File Inventory
+--------------------------------
+
+文件名 | File Name                     大小 | Size     编码 | Encoding
+--------------------------------------------------------------
+ire_agi_v7.py                              ~292 KB      UTF-8
+LICENSE                                    ~12 KB       UTF-8
+README.md                                  ~3.5 KB      UTF-8
+requirements.txt                           ~198 B       UTF-8
+.gitignore                                 ~250 B       UTF-8
+OPENSOURCE_REPORT.txt                      ~2 KB        UTF-8
+
+二、许可证信息 | License Information
+--------------------------------------
+许可证类型 | License Type:     Apache License 2.0
+许可证链接 | License URL:      http://www.apache.org/licenses/LICENSE-2.0
+全名 | Full Name:           Apache License, Version 2.0, January 2004
+
+三、依赖清单 | Dependency List
+--------------------------------
+PyTorch >= 2.0.0
+NumPy >= 1.24.0
+Matplotlib >= 3.7.0
+Transformers >= 4.37.0
+PEFT >= 0.7.0
+Accelerate >= 0.25.0
+bitsandbytes >= 0.41.0
+scikit-learn >= 1.3.0
+Pandas >= 2.0.0
+trl >= 0.7.0
+datasets >= 2.14.0
+unsloth >= 2024.5.0
+
+四、作者信息 | Author Information
+-----------------------------------
+作者名 | Author Name:   武光衡 (Wu Guangheng)
+邮箱 | Email:           991941426@qq.com
+GitHub:                  https://github.com/wugaungheng/IRE-AGI-v7.0
+
+五、技术栈 | Tech Stack
+-------------------------
+Python: 3.10+
+PyTorch: 2.6.0 (CUDA 12.4)
+GUI: tkinter
+AI Model: Qwen2.5-7B / Gemma 4 31B (via Ollama)
+GPU: NVIDIA RTX 4090 (24GB VRAM)
+
+六、安全声明 | Security Notice
+-------------------------------
+本软件为实验性研究项目，仅供学习交流使用。
+使用本软件产生的任何结果，作者不承担责任。
+
+七、Git 初始化建议 | Git Initialization
+----------------------------------------
+在 F:\IRE-AGI-OpenSource 目录下执行：
+
+  cd F:\IRE-AGI-OpenSource
+  git init
+  git add .
+  git commit -m "Initial commit: IRE-AGI v7.0"
+  git branch -M main
+  git remote add origin https://github.com/wugaungheng/IRE-AGI-v7.0.git
+  git push -u origin main
+
+================================
+报告生成完毕 | Report Generated Successfully

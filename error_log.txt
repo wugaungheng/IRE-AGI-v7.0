@@ -1,2 +1,0 @@
-[LOCK] Acquired lock: C:\Users\Administrator\AppData\Local\Temp\ire_agi_v7.lock (PID=25132)
-[START] IRE-AGI v7.0 starting (PID=25132)

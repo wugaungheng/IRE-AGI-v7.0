@@ -1,25 +1,3 @@
-"""
-IRE-AGI v7.0 - Advanced Consciousness Entropy 2.0 + Tool/Plugin/Automation
-
-Based on: WuGuangheng Theory - Advanced Consciousness Entropy 2.0 (2026)
-  S_c = -Int rho(L|phi) ln rho(L|phi) dmu(L) + beta*I(phi:K) + gamma*C[phi]
-
-Core implementations:
-1. Advanced Consciousness Entropy 2.0:
-   - Gibbs posterior distribution rho(L|phi)
-   - Law space measure via algebraic trace
-   - Mutual information I(phi:K)
-   - KL-divergence complexity C[phi]
-   - Coupling constants: beta=1/ln2, gamma=1/ln2-1
-   - Dynamics from action principle (Schrodinger-like)
-   - Law library evolution
-   - Wave function collapse via S_c gradient
-2. Tool-Use System: Consciousness-driven tool selection
-3. Plugin System: Extensible architecture
-4. Automation Engine: Workflow builder, scheduling, conditional branching
-5. Multimodal: Chat (Qwen2.5-7B) + Image (SDXL-Turbo)
-"""
-
 import os
 import sys
 import json
@@ -44,6 +22,30 @@ from torch.utils.data import DataLoader, TensorDataset
 
 import tkinter as tk
 from tkinter import ttk, scrolledtext, filedialog, messagebox, Menu
+
+
+"""
+IRE-AGI v7.0 - Advanced Consciousness Entropy 2.0 + Tool/Plugin/Automation
+
+Based on: WuGuangheng Theory - Advanced Consciousness Entropy 2.0 (2026)
+  S_c = -Int rho(L|phi) ln rho(L|phi) dmu(L) + beta*I(phi:K) + gamma*C[phi]
+
+Core implementations:
+1. Advanced Consciousness Entropy 2.0:
+   - Gibbs posterior distribution rho(L|phi)
+   - Law space measure via algebraic trace
+   - Mutual information I(phi:K)
+   - KL-divergence complexity C[phi]
+   - Coupling constants: beta=1/ln2, gamma=1/ln2-1
+   - Dynamics from action principle (Schrodinger-like)
+   - Law library evolution
+   - Wave function collapse via S_c gradient
+2. Tool-Use System: Consciousness-driven tool selection
+3. Plugin System: Extensible architecture
+4. Automation Engine: Workflow builder, scheduling, conditional branching
+5. Multimodal: Chat (Qwen2.5-7B) + Image (SDXL-Turbo)
+"""
+
 
 # =============================================================================
 # Memory Management System - Persistent Conversation Memory
