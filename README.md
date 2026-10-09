@@ -95,12 +95,23 @@ python ire_agi_v7.py
 
 ```
 IRE-AGI-OpenSource/
-├── ire_agi_v7.py      # 主程序（~206KB）
-├── LICENSE            # Apache 2.0
-├── README.md          # 本文件
-├── requirements.txt   # 依赖清单
-└── .gitignore         # Git 忽略配置
+├── ire_agi_v7.py        # 主程序（~292KB）
+├── LICENSE              # Apache 2.0
+├── README.md            # 本文件
+├── requirements.txt     # 依赖清单
+├── .gitignore           # Git 忽略配置
+└── WIE_Verification/    # 武光衡信息一元论统一方程开源验证资料
+    ├── README.md        # 验证总览（参照 OpenAI 公共数学验证论文组织）
+    ├── REVISION_LOG.md  # 修订追踪与引用指南
+    ├── manuscripts/     # 论文手稿（按版本家族分组：v1/v2/v3/WGE）
+    ├── evidence/        # 复验证据 JSON 与数值图
+    ├── scripts/         # 跑通脚本（15 个可复现脚本）
+    └── reports/         # 验证方法、对比分析、复盘报告
 ```
+
+## WIE 开源验证 | WIE Open Verification
+
+本仓库同时承载**武光衡信息一元论统一方程（WIE）**全系列论文手稿、验证证据与可复现脚本，组织方式参照 OpenAI 公共数学验证论文（手稿家族分组 + 机械化验证 + 推理报告 + 修订追踪）。详见 [WIE_Verification/README.md](WIE_Verification/README.md)。
 
 ## 许可证 | License
 

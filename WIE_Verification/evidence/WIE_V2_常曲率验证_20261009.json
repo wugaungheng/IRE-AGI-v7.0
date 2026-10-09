@@ -1,0 +1,28 @@
+{
+  "method": "球面对角度规 g_ii=R^2*prod sin^2(theta_j)；核对 Ric_ii/g_ii=(N-1)/R^2",
+  "S2": {
+    "Ric_proportional_to_g": true,
+    "Ricci_scalar": "2/R**2",
+    "Theta_analytic": "0"
+  },
+  "S3": {
+    "Ric_proportional_to_g": true,
+    "Ricci_scalar": "6/R**2",
+    "Theta_analytic": "-1/R**2"
+  },
+  "S4": {
+    "Ric_proportional_to_g": true,
+    "Ricci_scalar": "12/R**2",
+    "Theta_analytic": "-3/R**2"
+  },
+  "S5": {
+    "Ric_proportional_to_g": true,
+    "Ricci_scalar": "20/R**2",
+    "Theta_analytic": "-6/R**2"
+  },
+  "S11": {
+    "Theta": "-45/R**2",
+    "Theta_R1": "-45",
+    "note": "规律空间 N=11=1+4+6"
+  }
+}

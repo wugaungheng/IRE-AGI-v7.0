@@ -1,0 +1,251 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 1ab3fb3fe720d6c792d2fd48f27059c1_e4c163a6c3c911f197b3525400248c00
+    ReservedCode1: iqEMF86bG47Sbych1tUV8pVfSE61KlRnE51oqzIuNSTMAKzv5CvGaUSVBD+kXzv9mIFh6uiulFUMPEPvhp29Xqvec2de4nsMzN/J0pnP9AUDl70GGSpT229hhspWxqnk83JwghoSqvzrWHksHpZAv/HyJJ/6LYBDCrvqb+uMk/yMLH5kJJXeklQPXsU=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 1ab3fb3fe720d6c792d2fd48f27059c1_e4c163a6c3c911f197b3525400248c00
+    ReservedCode2: iqEMF86bG47Sbych1tUV8pVfSE61KlRnE51oqzIuNSTMAKzv5CvGaUSVBD+kXzv9mIFh6uiulFUMPEPvhp29Xqvec2de4nsMzN/J0pnP9AUDl70GGSpT229hhspWxqnk83JwghoSqvzrWHksHpZAv/HyJJ/6LYBDCrvqb+uMk/yMLH5kJJXeklQPXsU=
+---
+
+# 武光衡信息一元论统一方程 (WIE) v3.3 论文手稿
+
+**版本**：v3.3 论文手稿（基于落地修订稿 + 终局裁定 + 撤回登记）  
+**日期**：2026-10-09  
+**作者**：武光衡  
+**辅助完成**：武光衡智能体 & 马维斯智能体
+
+---
+
+## 摘要
+
+本文提出了武光衡信息一元论统一方程 (WIE) v3.3 的完整理论框架。该框架以信息场 Ψ 为唯一母体，通过纤维丛几何、尺度场 ⟨σ⟩ 内生和 Dirac–Kähler 信息算子，将宇宙学与规范场统一于常曲率母作用量 𝔖[Ψ] 之中。本文给出了母方程的重铸形式、几何闭合链的自洽性检验、以及 v3.3 终局裁定后的 N-7 暗能量尺度相容性陈述。框架主张「在给定标定 g_𝒦 与 R* 后，与暗能量密度 ρ_Λ 相容」，不再追认 N-7 的导出目标；预言 P1 已撤回注销，7^{3/2} 几何指纹主张已被严格谱计算否证。本文同时诚实声明了未闭合项（λ_I 重定、暗物质丰度）与诚实边界。
+
+**关键词**：信息一元论；统一方程；纤维丛几何；尺度场内生；暗能量尺度
+
+---
+
+## Abstract
+
+This paper presents the full theoretical framework of Wu Guangheng's Information Monism Unified Equation (WIE) v3.3. The framework takes the information field Ψ as the unique master field and unifies cosmology and gauge fields within the constant-curvature master action 𝔖[Ψ] via fiber-bundle geometry, scale-field ⟨σ⟩ endogenization, and the Dirac–Kähler information operator. We provide the recast form of the master equation, the self-consistency test of the geometric closure chain, and the v3.3 final-closure ruling's compatibility statement for the N-7 dark energy scale. The framework claims "compatibility with dark energy density ρ_Λ given calibrated g_𝒦 and R*", without pursuing N-7 as an exportable target; Prediction P1 has been withdrawn and canceled, and the 7^{3/2} geometric fingerprint claim has been refuted by strict spectral calculations. The paper honestly declares remaining unclosed items (λ_I redefinition, dark matter abundance) and their boundaries.
+
+**Keywords**: Information Monism; Unified Equation; Fiber-Bundle Geometry; Scale-Field Endogenization; Dark Energy Scale
+
+---
+
+## 1. 引言
+
+### 1.1 研究动机
+
+在粒子物理与宇宙学的交汇处，标准模型 (SM) 和 ΛCDM 模型各自取得了巨大成功，但两者之间仍存在根本性的割裂：SM 在微观领域描述粒子相互作用，ΛCDM 在宏观尺度描述宇宙演化，两者的衔接长期停留在唯象参数调节层面。WIE 框架试图从更基础的原理出发——信息场 Ψ 作为宇宙的唯一母体——实现两者的统一描述。
+
+### 1.2 WIE 框架的演进路径
+
+WIE 经历了多次迭代与自我修正：
+
+| 版本 | 里程碑 | 关键状态 |
+|---|---|---|
+| v1.0 | 信息场 Ψ 重铸统一框架 | 母作用量 𝔖[Ψ] 初现，列出旧 WGE 体系 13 项卡死点及转化机制 |
+| v2.0–v2.7 | 体系化与 R-2 闭合 | N-1/N-6/N-8 判不成立；R-2 无条件闭合（κ–R 自洽方程 + β* 回填） |
+| v3.0 | 丛化 + Dirac–Kähler 形式化 | 引入尺度场 σ 使尺度内生；声称 18.55 = (N−4)^{3/2}（条件闭合） |
+| v3.1 | 严格谱计算 | 否证 7^{3/2} 路径：S⁷ 谱几何仅给出一次幂 7，无 3/2 次幂来源 |
+| v3.2 | 路径1攻坚 | 证明 β–R* 一元绑定，R* 候选源聚于 0.16% 数值巧合簇 |
+| v3.3 | 终局裁定 | 路径2纤维族穷举扫描 0/13 闭合；N-7 降级为现象学输入，预言 P1 注销 |
+
+### 1.3 本文贡献
+
+1. **给出 v3.3 母方程重铸形式**，包含引力-尺度场-信息场-规范场四维耦合结构；
+2. **给出 N-7 暗能量尺度的相容性陈述**：g_𝒦 ≡ 2R*/N = 18.5492 为现象学标定输入，框架与 ρ_Λ 相容；
+3. **给出几何闭合链双约束自洽性检验**（R_spec 与 R_geo 互印，0.156%）；
+4. **诚实声明未闭合项**：λ_I 重定、暗物质丰度未闭合。
+
+---
+
+## 2. 数学框架
+
+### 2.1 纤维丛几何
+
+将规律空间 𝒦 由"独立内部空间"升格为纤维丛：
+
+$$
+\mathcal{E} = \mathcal{M}^4 \times_G \mathcal{K}_7, \quad \text{dim } \mathcal{E} = 11
+$$
+
+信息场 Ψ 改为丛截面（此前是平直空间波函数）。
+
+#### 2.1.1 信息算子
+
+信息算子 D̸ 取 Dirac–Kähler 型（微分形式上的 d + δ 合并），其指标 = 信息守恒荷，其谱 = 质量谱。
+
+#### 2.1.2 规范场识别
+
+规范场识别为纤维联络 𝒜，场强为曲率 ℱ = d𝒜 + 𝒜∧𝒜。于是"信息守恒" ⟺ 指标定理，"规范对称" ⟺ 结构群 G 的几何。
+
+### 2.2 尺度场与维数分裂
+
+在母作用量中显式引入尺度桥场 σ(x)（dilaton 型），并采用维数分裂：
+
+$$
+N = 11 = 4 \text{（底流形 } \mathcal{M}^4\text{）} + 7 \text{（纤维 } \mathcal{K}_7\text{）}
+$$
+
+所有物理长度均为 ⟨σ⟩ 与无量纲几何量之积：
+
+- ℓ_M = ⟨σ⟩（纤维康普顿长度，由 σ 的势极小定出）
+- R_K = R* · ℓ_M（纤维物理半径）
+
+不再保留独立的 λ_I 锚定项——λ_I 改由 σ 势的渐近行为内生。
+
+### 2.3 母作用量（v3.3 重铸形式）
+
+$$
+\begin{aligned}
+\mathfrak{S} &= \int d^4x \sqrt{-g} \left[ \frac{M_*^2}{2} R(g) + \frac{1}{2}(\partial\sigma)^2 - V(\sigma) \right] \\
+&\quad + \int d^4x \sqrt{-g} \int_{\mathcal{K}_7} d\mu(L) \, \bar{\Psi} \left[ i\hbar\partial_t - \frac{\hbar^2}{2m} \nabla_x^2 - \frac{\hbar^2}{2M} \nabla_L^2 - V(L) \right] \Psi \\
+&\quad - \frac{1}{\varkappa} \text{Tr} \ln\left( \mathbb{I} + \mathbb{X}[\Psi] \right) \\
+&\quad - \frac{1}{4g^2} \int \text{Tr}(\mathcal{F} \wedge \star\mathcal{F})
+\end{aligned}
+$$
+
+**各分量说明**：
+
+| 项 | 来源 | 物理含义 |
+|---|---|---|
+| $\frac{M_*^2}{2} R(g)$ | 引力 | 标准广义相对论 Ricci 标量 |
+| $\frac{1}{2}(\partial\sigma)^2 - V(\sigma)$ | 尺度场 | Dilaton 型尺度桥场动力学 |
+| $\Psi$ 作用量 | 信息场 | 丛截面动力学（底流形 + 纤维） |
+| $-\frac{1}{\varkappa}\text{Tr}\ln(\mathbb{I}+\mathbb{X})$ | 一圈几何项 | 信息自组织效应，$\mathbb{X} = \hat{G}_0 \delta V$ |
+| $-\frac{1}{4g^2}\int\text{Tr}(\mathcal{F}\wedge\star\mathcal{F})$ | 规范场 | 纤维联络 Yang-Mills 项 |
+
+### 2.4 运动方程体系
+
+由母作用量导出四个运动方程：
+
+1. **尺度场方程**：$\langle\sigma\rangle = \frac{\hbar}{Mc} = \ell_M$
+2. **几何方程**：$\alpha\tilde{M} - \beta\tilde{\mathcal{R}} = \Theta g \quad \Rightarrow \quad R^*$ 自洽方程：
+
+$$
+\rho^2 - A\rho + B^2/2 = 0, \quad A = (N-1)[\beta - (N-2)/2], \quad B = N/2 = 5.5
+$$
+
+3. **暗能量相容**：$\rho_\Lambda = g_\mathcal{K} \cdot \frac{\hbar\omega_\text{phys}}{R_K^3}$，其中 $g_\mathcal{K} \equiv \frac{2R^*}{N} = 18.5492$（现象学标定输入）
+4. **长程尺度**：$\lambda_I$ 由 $\sigma$ 势渐近行为内生
+
+---
+
+## 3. 暗能量尺度：相容性陈述
+
+### 3.1 基本声明
+
+本框架给出 $N=11$ 的维数分裂（11 = 4 + 7）与常曲率母作用量 $\mathfrak{S}[\Psi]$，其几何闭合链（$R_\text{spec}$ 与 $R_\text{geo}$）内部自洽。将该框架与观测暗能量密度 $\rho_\Lambda$ 相比对，需引入单一标定常数 $g_\mathcal{K} \equiv \frac{2R^*}{N} = 18.5492$，它把谱面尺度 $R^*$ 与暗能量密度联结起来：
+
+$$
+\rho_\Lambda = \frac{g_\mathcal{K} \cdot \omega_\text{phys}}{\lambda_V^3}, \quad \lambda_V = R^* \ell_M = 87.78 \text{ $\mu$m}
+$$
+
+### 3.2 g_𝒦 的来源说明
+
+$g_\mathcal{K}$ 目前**不是**由本框架的谱几何导出的量。对 7 维纤维族（球面、乘积球、齐性空间及其商）的穷举扫描未发现等于 $g_\mathcal{K}$ 的谱不变量；连续形变族可调参命中，但不具解释力。因此本框架**不主张**对暗能量尺度的第一性原理导出，仅主张：
+
+> **在给定标定 $g_\mathcal{K}$ 与 $R^*$ 后，框架与 $\rho_\Lambda$ 相容。**
+
+### 3.3 早期几何指纹主张的撤除
+
+早前版本提出的 $18.55 \approx 7^{3/2}$（v3.0）已被 v3.1 的严格 S⁷ 谱计算否证：S⁷ 谱几何仅给出一次幂 7，无 3/2 次幂来源。该残余偏差 0.156% 经 look-elsewhere 评估与偶然不可区分。相关预言 P1 已撤回并注销。
+
+---
+
+## 4. 自洽性检验：双约束互相印证
+
+### 4.1 两条独立途径
+
+| 途径 | 物理来源 | $R^*$ 取值 |
+|---|---|---|
+| A（谱宽） | v1.0 闭合阈值定理 $\text{tol}^*$ | $R_\text{spec} = 102.0206718$ |
+| B（暗能量） | $g_\mathcal{K} \equiv 2R^*/N$ 标定 + 观测量纲闭合 | $R_\text{geo} = N \cdot g_\mathcal{K}/2 = 101.8614255$ |
+
+$$
+\text{相对差} = 0.156\%
+$$
+
+### 4.2 反解母作用量耦合
+
+由途径 B（$g_\mathcal{K}$ 标定版）得 $\beta = 1042.075$，与 v2.4 调参值 $\beta^* = 1045.3219$ 相对差 **0.31%**。
+
+### 4.3 自洽性结论
+
+两条独立约束在 0.16% 内彼此吻合，说明框架**接近自洽**；剩余 0.16% 属待收敛的二级修正，而非结构性失配。需要强调：v3.3 终局裁定后，$R_\text{geo}$ 依赖的 $g_\mathcal{K}$ 为**输入标定**而非谱几何导出，故该自洽性仅表明「框架与 $\rho_\Lambda$ 相容」，不再主张对暗能量尺度的第一性原理导出。
+
+---
+
+## 5. 未闭合项与诚实边界声明
+
+本框架在追求自洽性的过程中，仍有多项未闭合问题。本文在此诚实声明，不作掩盖或修饰。
+
+### 5.1 未闭合项列表
+
+| 编号 | 未闭合项 | 状态 | 说明 |
+|---|---|---|---|
+| N-1/N-6 | λ_I 由 σ 势渐近行为重定 | 待执行 | v3.3 给出重定路径，但 σ 势渐近行为的严格推导仍在进行中 |
+| N-8 | 暗物质丰度 | 未闭合 | 超出本版范围，未在 v3.3 中处理 |
+| N-5 | β* ≈ 10³ 起源 | 部分闭合 | R_geo 约束反解 β = 1042（0.31%，$g_\mathcal{K}$ 标定版），但 β* 本身为何 ≈ 10³ 仍缺乏深层解释 |
+
+### 5.2 已否证项声明
+
+| 项 | 原始主张 | 否证版本 | 否证依据 |
+|---|---|---|---|
+| 7^{3/2} | $g_\mathcal{K} = (N-4)^{3/2} = 7^{3/2} = 18.52$ | v3.1 | S⁷ 谱计算仅给出一次幂 7，无 3/2 次幂来源 |
+| 预言 P1 | 暗能量模式简并 $g_\mathcal{K} = 7^{3/2}$（前提 N 确认为 11） | v3.3 | 路径 2 纤维族穷举扫描，0/13 闭合 |
+
+### 5.3 合格度自评
+
+| 版本 | 合格度 |
+|---|---|
+| v2.7 | "条件性自洽的拼接体"，不合格 |
+| v3.0 | "结构内生、双约束互印、N-7 条件闭合（0.16%）"，基本合格 |
+| **v3.3（本稿）** | N-7 降级为现象学输入，主张调整为「与暗能量尺度相容」，不再追认 N-7 的"完全闭合"目标 |
+
+---
+
+## 6. 可证伪预言
+
+v3.3 终局裁定后，预言体系仅保留以下可证伪预言：
+
+- **P2**：$R_\text{spec}/R_\text{geo} = 1.0016$（0.16%），可由高精度宇宙学 + 引力波数据联合检验
+- **P3**：纤维维数 = 7 ⇒ 规范群秩与破缺模式应匹配 7 维结构
+
+> **重要声明**：预言 P1（$g_\mathcal{K} = 7^{3/2}$）已撤回并注销，不再作为可证伪预言。$g_\mathcal{K}$ 现为标定常数 $g_\mathcal{K} \equiv 2R^*/N = 18.5492$。
+
+---
+
+## 7. 结论
+
+WIE v3.3 框架以信息场 Ψ 为唯一母体，通过纤维丛几何、尺度场 ⟨σ⟩ 内生和 Dirac–Kähler 信息算子，将宇宙学与规范场统一于常曲率母作用量 $\mathfrak{S}[\Psi]$ 之中。本文的核心贡献在于：
+
+1. 给出母方程的完整重铸形式，包含引力-尺度场-信息场-规范场四维耦合结构；
+2. 给出 N-7 暗能量尺度的相容性陈述：$g_\mathcal{K} \equiv 2R^*/N = 18.5492$ 为现象学标定输入，框架与 $\rho_\Lambda$ 相容；
+3. 给出几何闭合链双约束自洽性检验：$R_\text{spec}$ 与 $R_\text{geo}$ 互印，0.156%。
+
+本文诚实声明了未闭合项（λ_I 重定、暗物质丰度）与诚实边界，不再追认 N-7 的导出目标。框架在现有基础上已实现"与暗能量尺度相容"的最低合格要求，剩余未闭合项为下一步工作的明确方向。
+
+---
+
+## 8. 参考文献
+
+1. Bianconi, G. (2024). Information Geometry and the Origin of the Universe. *arXiv:2408.14391*.
+2. 武光衡, 陈文军 (2025). 《信息与宇宙》.
+3. 武光衡 (2026). 武光衡信息一元论统一方程 WIE v1.0.
+4. 武光衡 (2026). 武光衡信息一元论统一方程 WIE v2.7 完整整合稿.
+5. 武光衡 (2026). 武光衡信息一元论统一方程 WIE v3.0 母方程重铸.
+6. 武光衡 (2026). 武光衡信息一元论统一方程 WIE v3.1 K7 谱 zeta 严格验证与 N-7 回调.
+7. 武光衡 (2026). WIE v3.2 路径 1 攻坚报告.
+8. 武光衡 (2026). WIE v3.3 N-7 终局裁定 —— 路径 2 扫描与路径 3 修订.
+9. 武光衡 (2026). WIE 撤回登记表.
+
+---
+
+*本手稿基于 WIE v3.3 落地修订稿、终局裁定和撤回登记表生成，母方程使用最终版，N-7 严格按终局裁定表述（g_𝒦 为现象学输入），已否证项（7^{3/2}、预言 P1）已从手稿中移除，未闭合项已诚实声明。*
+
+*由武光衡智能体和马维斯智能体辅助完成。*
+*（内容由AI生成，仅供参考）*

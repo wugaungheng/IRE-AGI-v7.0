@@ -1,0 +1,120 @@
+{
+  "round": "R60",
+  "date": "2026-10-09",
+  "purpose": "对‘PRED-A1 外部锚’候选通道做量纲通道门审计（gate audit），判定方案一/二/三是否结构性可通",
+  "constants": {
+    "G": 6.6743e-11,
+    "a0_mond": 1.2e-10,
+    "hbar": 1.054571817e-34,
+    "c": 299792458.0,
+    "lambda_default_m": 1e+20
+  },
+  "dimensional_audit": {
+    "lam_wge_dim": [
+      1,
+      0,
+      0
+    ],
+    "lam_gal_dim": [
+      0,
+      0,
+      0
+    ],
+    "lam_wge_is_length": true,
+    "lam_gal_is_dimensionless": true,
+    "lam_gal_equals_lam_wge_dim": false
+  },
+  "mond_identity": {
+    "statement": "V^4 = G*M*a0*lam_gal  ⇒  lam_gal = V^4/(G*M*a0)；若 MOND 关系 a0=V^4/(G*M) 成立，则 lam_gal ≡ 1（与任何数据无关）",
+    "numeric_example": {
+      "note": "文献量级示例（NGC 3198 量级：V≈150 km/s, M_bary≈3e10 Msun）；非 SPARC 导入，仅示 O(1)",
+      "V_ms": 150000.0,
+      "M_kg": 5.967e+40,
+      "lam_gal": 1.0593074549550268
+    },
+    "conclusion": "lam_gal 是无量纲 MOND 偏差比（≈1），不是长度；与 WGE λ（长度, 1e20 m）量纲不同，不能充当其外部锚"
+  },
+  "k4_compton_bridge": {
+    "relation": "lam = hbar/(m*c);  m_eff = hbar/(c*lam)",
+    "m_eff_at_lam_1e20kg": 3.517672939590762e-63,
+    "lam_from_m_electron_m": 3.8615926772428334e-13,
+    "orders_apart_vs_1e20m": 32.413233537743345
+  },
+  "gauge_weight_table": [
+    {
+      "observable": "r",
+      "p_lambda": 0,
+      "p_c": 0,
+      "w": 0,
+      "w_nonzero": false
+    },
+    {
+      "observable": "M",
+      "p_lambda": 0,
+      "p_c": 0,
+      "w": 0,
+      "w_nonzero": false
+    },
+    {
+      "observable": "v",
+      "p_lambda": 0,
+      "p_c": 0,
+      "w": 0,
+      "w_nonzero": false
+    },
+    {
+      "observable": "T",
+      "p_lambda": 0,
+      "p_c": 0,
+      "w": 0,
+      "w_nonzero": false
+    },
+    {
+      "observable": "a",
+      "p_lambda": 0,
+      "p_c": 0,
+      "w": 0,
+      "w_nonzero": false
+    },
+    {
+      "observable": "L_ang",
+      "p_lambda": 0,
+      "p_c": 0,
+      "w": 0,
+      "w_nonzero": false
+    },
+    {
+      "observable": "lam_gal=V^4/(GMa0)",
+      "p_lambda": 1,
+      "p_c": 0,
+      "w": 1,
+      "w_nonzero": true
+    },
+    {
+      "observable": "lam_K4=hbar/(mc)",
+      "p_lambda": -1,
+      "p_c": 0,
+      "w": -1,
+      "w_nonzero": true
+    }
+  ],
+  "orders_artifact_check": {
+    "R50_reported_orders_apart": 20,
+    "log10_lambda_default": 20.0,
+    "is_unit_artifact": true
+  },
+  "verdict": {
+    "scheme1_T_based": "结构性封闭：w 只计 p_lambda+p_c，T 读数 p_lambda=p_c=0 ⇒ w=0，与数据精度无关（EA-4 已实测 w=0）；提高 Gaia/JPL 精度不可能改变幂次零",
+    "scheme2_M_based": "结构性封闭：纯质量读数 w=0",
+    "scheme3_G_combos": "结构性封闭：G 不入 λ/c 幂律 ⇒ w=0",
+    "only_w_nonzero_candidate_lam_gal": "量纲自洽性否决：该式给出的 lam_gal 无量纲(≡1)，非 WGE 长度 λ ⇒ 不能锚定 λ_default；R50 所记‘相差 ~20 个数量级’恰等于 log10(1e20)，属单位记账伪差",
+    "k4_compton_route": "量纲自洽但数值否决：λ=1e20 m 对应 m_eff≈3.5e-63 kg（不可测）；反之电子级实测质量给 λ≈3.9e-13 m，与 1e20 m 相差 ~32.4 个数量级",
+    "net": "在现行 WGE 表述（λ 为长度、且 K-4 桥取康普顿口径）下，不存在量纲自洽且数值可达的外部观测量可承载 λ 的绝对标度 ⇒ PRED-A1 不是‘待收集数据’问题，而是表述层缺口",
+    "not_a_breakthrough": true
+  },
+  "scope_limits": [
+    "本判定仅覆盖项目现行公式集（galaxy_simulation_tool.py 的 V^4=GMa0λ 与 dynamics.py 的康普顿桥）；新增量纲耦合可另开通道",
+    "未改动任何源码；未写入项目目录；示例数值为文献量级，非观测导入",
+    "未闭合项一律不得写成已完成"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "version": "v2.6",
+    "date": "2026-10-09",
+    "N": 11,
+    "source": "WIE_v2.5 参数",
+    "L_univ_m": 4.4e+26
+  },
+  "N6_lambda_I": {
+    "lambda_I_compton_m": 8.604531304784749e-07,
+    "ratio_to_0.1ly": 1.099505613666597e+21,
+    "m_for_0.1ly_eV": 2.0857478279324393e-22,
+    "M_fiber_eV": 0.22932914455046285,
+    "ratio_M": 1.0995056136665971e+21,
+    "verdict": "不成立"
+  },
+  "N7_rho_vac": {
+    "omega_phys_rad_s": 184111033178.68463,
+    "hbar_omega_J": 1.9415830678899273e-23,
+    "rho_Lambda_J_m3": 5.32396581716031e-10,
+    "schemeA_half": {
+      "rho_vac": 1.4350921403888582e-11,
+      "ratio": 37.09842502320239
+    },
+    "schemeA_prime": {
+      "rho_vac": 2.8701842807777164e-11,
+      "ratio": 18.549212511601194
+    },
+    "schemeB_lM": {
+      "rho_vac": 1.5238573825837465e-05,
+      "ratio": 3.4937428384100905e-05
+    },
+    "schemeC_xiL": {
+      "rho_vac": 1.046705491816493e-62,
+      "ratio": 5.086402869560657e+52
+    },
+    "identity_check": {
+      "lambda_V_over_lM_sqrtkappa": 193064.24364955112,
+      "direct": 18.549212511601194
+    },
+    "L_needed_for_match_m": 3.316196367029227e-05,
+    "lambda_V_over_L_needed": 2.6471293234140028,
+    "verdict": "量级匹配, 差 O(20)"
+  },
+  "N8_DM_abundance": {
+    "xi_Psi_lambda_V_m": 8.778400645362051e-05,
+    "ratio_squared": 3.980388320789922e-62,
+    "Omega_DM_target": 0.265,
+    "gap": 6.657641884232286e+60,
+    "xi_needed_m": 2.26503863101714e+26,
+    "xi_needed_Mpc": 7339.723366873428,
+    "ratio_xi_needed_over_lambdaV": 2.58024066401417e+30,
+    "verdict": "不成立"
+  },
+  "summary": {
+    "N-6_lambda_I": {
+      "verdict": "不成立",
+      "gap": "1.100e+21x",
+      "note": "与 N-1 同源"
+    },
+    "N-7_rho_vac": {
+      "verdict": "量级匹配差 O(20)",
+      "gap": "18.55x",
+      "note": "18.55 因子恒等重现"
+    },
+    "N-8_DM_abundance": {
+      "verdict": "不成立",
+      "gap": "6.658e+60x",
+      "note": "差 62 个数量级"
+    }
+  }
+}

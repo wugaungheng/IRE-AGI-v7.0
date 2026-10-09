@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "version": "方案二",
+    "date": "2026-10-09",
+    "N": 11,
+    "R_star": 102.0206718346253,
+    "B2": 30.25,
+    "alpha": 1,
+    "crit_cf": 45.1015
+  },
+  "table": [
+    {
+      "cf": 0,
+      "beta_star": 45.1015,
+      "status": "通过",
+      "note": "O(100)"
+    },
+    {
+      "cf": 1,
+      "beta_star": 35.1015,
+      "status": "通过",
+      "note": "O(100)"
+    },
+    {
+      "cf": 2,
+      "beta_star": 25.1015,
+      "status": "通过",
+      "note": "O(10)"
+    },
+    {
+      "cf": 3,
+      "beta_star": 15.1015,
+      "status": "通过",
+      "note": "O(10)"
+    },
+    {
+      "cf": 4,
+      "beta_star": 5.1015,
+      "status": "通过",
+      "note": "O(10)"
+    },
+    {
+      "cf": 5,
+      "beta_star": -4.8985,
+      "status": "不通过",
+      "note": ""
+    },
+    {
+      "cf": 6,
+      "beta_star": -14.8985,
+      "status": "不通过",
+      "note": ""
+    },
+    {
+      "cf": 7,
+      "beta_star": -24.8985,
+      "status": "不通过",
+      "note": ""
+    },
+    {
+      "cf": 8,
+      "beta_star": -34.8985,
+      "status": "不通过",
+      "note": ""
+    },
+    {
+      "cf": 9,
+      "beta_star": -44.8985,
+      "status": "不通过",
+      "note": ""
+    },
+    {
+      "cf": 10,
+      "beta_star": -54.8985,
+      "status": "不通过",
+      "note": ""
+    },
+    {
+      "cf": 11,
+      "beta_star": -64.8985,
+      "status": "不通过",
+      "note": ""
+    },
+    {
+      "cf": 12,
+      "beta_star": -74.8985,
+      "status": "不通过",
+      "note": ""
+    },
+    {
+      "cf": 13,
+      "beta_star": -84.8985,
+      "status": "不通过",
+      "note": ""
+    },
+    {
+      "cf": 14,
+      "beta_star": -94.8985,
+      "status": "不通过",
+      "note": ""
+    },
+    {
+      "cf": 15,
+      "beta_star": -104.8985,
+      "status": "不通过",
+      "note": ""
+    },
+    {
+      "cf": 16,
+      "beta_star": -114.8985,
+      "status": "不通过",
+      "note": ""
+    },
+    {
+      "cf": 17,
+      "beta_star": -124.8985,
+      "status": "不通过",
+      "note": ""
+    },
+    {
+      "cf": 18,
+      "beta_star": -134.8985,
+      "status": "不通过",
+      "note": ""
+    },
+    {
+      "cf": 19,
+      "beta_star": -144.8985,
+      "status": "不通过",
+      "note": ""
+    },
+    {
+      "cf": 20,
+      "beta_star": -154.8985,
+      "status": "不通过",
+      "note": ""
+    }
+  ],
+  "o1_range": {
+    "cf_min": null,
+    "cf_max": null
+  },
+  "o10_range": {
+    "cf_min": 1.75,
+    "cf_max": 4.0
+  },
+  "conclusion": "β 随 c_f 递减；c_f=0 时 β=1045.3（同 v2.4），随 c_f 增加快速下降。β 回到 O(1) 需 c_f≈3.6~3.85，O(10) 需 c_f≈3.0~4.2。c_f=0.4 时 β≈780，c_f=1 时 β≈376，c_f=2 时 β≈152。纤维项必须贡献约 3.5 倍标量曲率量级才能使 β→O(1)，这与 Bianconi 2025 中纤维曲率与标量曲率同量级（c_f≈0.5）的预期不符。因此方案二难以自然把 β 拉到 O(1)，除非引入更强的额外耦合。"
+}

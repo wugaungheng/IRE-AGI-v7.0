@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "version": "v2.5",
+    "date": "2026-10-09",
+    "N": 11,
+    "alpha": 1,
+    "units": "hbar=M=c=1 for K-sector; SI for physical scales"
+  },
+  "1_O1_normalization": {
+    "v24": {
+      "label": "v2.4 采用的 O(1) 系数 (=1)",
+      "B2": 121.0,
+      "B": 11.0,
+      "A_star": 10408.223294303129,
+      "beta_star": 1045.3223294303127,
+      "beta_star_str": "1045.322329430",
+      "Delta": 108330870.14407426,
+      "rho_plus": 10408.217481588308,
+      "R_plus": 102.0206718346253,
+      "rho_minus": "0.005812714820",
+      "residual": 0.0,
+      "rel_residual": "0.000e+3",
+      "kappa_star": 1.1169472255553757e-06,
+      "kappa_geo": 1.1169472255553757e-06,
+      "kappa_gap": 1.172373e-59,
+      "omega": 0.0010568572399124567,
+      "lambda_I_num": 946.2015892353008,
+      "R_plus_matches_Rstar": 0.0
+    },
+    "v25_strict": {
+      "label": "v2.5 严格归一 (系数=1/4)",
+      "B2": 30.25,
+      "B": 5.5,
+      "A_star": 10408.218934767014,
+      "beta_star": 1045.3218934767015,
+      "beta_star_str": "1045.321893477",
+      "Delta": 108330960.8940426,
+      "rho_plus": 10408.217481588308,
+      "R_plus": 102.0206718346253,
+      "rho_minus": "0.001453178705",
+      "residual": 1e-51,
+      "rel_residual": "9.231e-60",
+      "kappa_star": 2.7923680638884393e-07,
+      "kappa_geo": 2.7923680638884393e-07,
+      "kappa_gap": 2.930933e-60,
+      "omega": 0.0005284286199562283,
+      "lambda_I_num": 1892.4031784706017,
+      "R_plus_matches_Rstar": 0.0
+    },
+    "delta_beta": -0.00043595361125881027,
+    "conclusion": "O(1) 系数由 1 归一为 1/4，beta* 仅移 4.4e-4 量级，R-2 闭合结构不变"
+  },
+  "2_physical_scales_SI": {
+    "Lambda_obs_m-2": 1.1056e-52,
+    "xi_Lambda_m": 9752152691255.746,
+    "xi_Lambda_ly": 0.0010308033528192721,
+    "lambda_V_m": 8.778400645362051e-05,
+    "lambda_V_um": 87.78400645362052,
+    "lambda_V_struct_check_um": 87.78400645362053,
+    "lambda_V_v21_um": 28.0,
+    "Lambda_implied_by_28um_m-2": 1.0681383231018889e-50,
+    "ratio_Lambda_implied_over_obs": 96.61164282759488,
+    "lambda_V_corrected_over_v21": 3.135143087629304
+  },
+  "3_dimension_bridge": {
+    "l_M_m": 8.604531304784749e-07,
+    "M_fiber_kg": 4.0881633350961e-37,
+    "M_fiber_eV": 0.22932914455046285,
+    "lambda_I_from_kappa_mm": 1.6283242390424453,
+    "l_M_for_0.1ly_m": 499932074740.3707,
+    "M_for_0.1ly_eV": 3.947075819067503e-19,
+    "ratio_M_two_calibrations": 5.810102340639656e+17,
+    "ratio_kappa_phys_over_lambda_V": 18.549213060840966,
+    "ratio_xiLambda_over_lambda_V": 1.110925906122565e+17,
+    "conclusion": "kappa^{-1/2} 物理值 ~1.63 mm，与 lambda_V ~87.8 um 同量级(差 18.6 倍)；若强行令 lambda_I = 0.1 光年，需 M ~ 3.9e-19 eV，与 lambda_V 定标下的 M ~ 0.229 eV 相差 ~5.8e17 倍 -> N-1 等式不成立"
+  }
+}
