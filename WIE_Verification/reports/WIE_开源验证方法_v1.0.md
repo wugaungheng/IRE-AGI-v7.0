@@ -104,7 +104,7 @@ python -m wie_verify.cmbs_recover_R \
     --ell-max 1500 \
     --tol-threshold 0.002
 ```
-完整脚本模板见开源仓库 `wie-verify-tools/cmb_verify.py`。
+完整脚本模板见开源仓库 `WIE_Verification/scripts/wie_kappa_R_selfconsistency.py`。
 
 ### 3.2 P3：纤维维数 = 7，规范群秩匹配
 
@@ -128,7 +128,7 @@ python -m wie_verify.topological_rank_match \
     --fib-dimension 7 \
     --group-rank 4
 ```
-完整脚本模板见 `wie-verify-tools/topology_check.py`。
+完整脚本模板见开源仓库 `WIE_Verification/scripts/` 目录。
 
 ### 3.3 P1（已注销）
 
@@ -254,33 +254,15 @@ def check_omega_chi_prediction(g_K, R_star, N=11):
 ### 5.2 数据处理脚本模板（GitHub 仓库）
 
 ```bash
-# 克隆验证工具
-git clone https://github.com/wguangheng/wie-verify-tools.git
-cd wie-verify-tools
+# 克隆开源验证仓库（完整资料在 WIE_Verification/ 目录）
+git clone https://github.com/wugaungheng/IRE-AGI-v7.0.git
+cd IRE-AGI-v7.0/WIE_Verification
 
-# 安装依赖
-pip install -r requirements.txt
+# 查看全部验证脚本（scripts/ 目录，15 个 Python 脚本）
+ls scripts/
 
-# 验证 P2：CMB 独立反解 R*
-python -m wie_verify.cmbs_recover_R \
-    --data Planck_2018_lensing.fits \
-    --ell-max 1500 \
-    --tol-threshold 0.002 \
-    --output result_p2_cmb.json
-
-# 验证 P3：拓扑秩匹配
-python -m wie_verify.topological_rank_match \
-    --data LHC_higgs_data.csv \
-    --fib-dimension 7 \
-    --group-rank 4 \
-    --output result_p3_topology.json
-
-# 验证 P-WIE-M1：暗物质质量谱连续性
-python -m wie_verify.mass_spectrum \
-    --data SKA_radio_survey.fits \
-    --min-frequency 100e6 \
-    --max-frequency 2e9 \
-    --output result_m1_spectrum.json
+# 复验 v3.3 全部 24 项（对应 evidence/WIE_v3.3_复验证据.json）
+python scripts/wie_reverify_v33.py
 ```
 
 ### 5.3 判据阈值
@@ -297,23 +279,21 @@ python -m wie_verify.mass_spectrum \
 
 ### 5.4 社区贡献指南
 
-1. **提交验证结果**：将复现结果放入 `wie-verify-tools/results/`，附数据下载来源
-2. **提交改进脚本**：PR 到 `wie-verify-tools/` 仓库，遵守 PEP 8 编码规范
-3. **提交新数据源**：在 `docs/data_sources.md` 中添加新数据源链接和格式
+1. **提交验证结果**：将复现结果放入 `WIE_Verification/results/`，附数据下载来源
+2. **提交改进脚本**：PR 到 `IRE-AGI-v7.0` 仓库的 `WIE_Verification/scripts/`，遵守 PEP 8 编码规范
+3. **提交新数据源**：在 `WIE_Verification/README.md` 中添加新数据源链接和格式
 4. **提交判据建议**：对现有判据阈值的修改建议，需附统计分析依据
 
 ```bash
 # 提交验证结果的模板
 mkdir -p results/p2_cmb/
 cp Planck_2018_lensing.fits results/p2_cmb/
-python -m wie_verify.cmbs_recover_R \
-    --data results/p2_cmb/Planck_2018_lensing.fits \
-    --output results/p2_cmb/result.json
+python scripts/wie_reverify_v33.py --output results/p2_cmb/result.json
 
 # 推送到 GitHub
-git add results/p2_cmb/
+git add results/
 git commit -m "P2 CMB verification: R_CMB = X.XXX"
-git push origin master
+git push origin main
 ```
 
 ---
@@ -395,20 +375,19 @@ git push origin master
 
 ### 8.2 生成数据报告与文件索引
 
-以下文件为本项目自主生成、已通过验证且可下载的文件。读者可直接通过本地 `file://` 链接下载原文或验证数据。
+以下文件为本项目自主生成、已通过验证且可公开下载的文件。全文已开源至 GitHub 仓库 [IRE-AGI-v7.0](https://github.com/wugaungheng/IRE-AGI-v7.0)，读者可直接通过在线链接查看或下载原文与验证数据。
 
-| # | 文件名 | 说明 | 下载链接 |
+| # | 文件名 | 说明 | 在线链接 |
 |---|---|---|---|
-| 1 | `WIE_v3.3_论文手稿_复验修订版.md` | 复验修订版论文手稿（含附录 A 完整复验明细） | [下载](file:///C:/Users/Administrator/AppData/Roaming/Tencent/Marvis/User/910CF9D8FBF963F109E2915A63F38F70/workspace/conv_c220e5e084e345aa8edd6702582cebba/output/WIE_v3.3_论文手稿_复验修订版.md) |
-| 2 | `WIE_v3.3_与其他统一方程对比分析报告_20261009.md` | WIE v3.3 与 WGE、MSTG、String Theory 对比分析 | [下载](file:///C:/Users/Administrator/AppData/Roaming/Tencent/Marvis/User/910CF9D8FBF963F109E2915A63F38F70/workspace/conv_c220e5e084e345aa8edd6702582cebba/output/WIE_v3.3_与其他统一方程对比分析报告_20261009.md) |
-| 3 | `WIE_开源验证方法_v1.0.md`（本文件） | 本文档，开源验证方法方案 | [下载](file:///C:/Users/Administrator/AppData/Roaming/Tencent/Marvis/User/910CF9D8FBF963F109E2915A63F38F70/workspace/conv_c220e5e084e345aa8edd6702582cebba/output/WIE_开源验证方法_v1.0.md) |
-| 4 | `WIE_v3.3_复验证据.json` | 复验证据数据（24 项完整记录，含数值/判定/误差） | [下载](file:///C:/Users/Administrator/AppData/Roaming/Tencent/Marvis/User/910CF9D8FBF963F109E2915A63F38F70/workspace/conv_c220e5e084e345aa8edd6702582cebba/output/WIE_v3.3_复验证据.json) |
-| 5 | `WIE_撤回登记表.md` | WIE 预言撤回登记表（含 P1 注销条目） | [下载](file:///C:/Users/Administrator/AppData/Roaming/Tencent/Marvis/User/910CF9D8FBF963F109E2915A63F38F70/workspace/conv_c220e5e084e345aa8edd6702582cebba/output/WIE_撤回登记表.md) |
-| 6 | `WIE_v3.3_N-7终局裁定_路径2扫描与路径3修订.md` | v3.3 终局裁定：路径 2 扫描 + 路径 3 修订 | [下载](file:///C:/Users/Administrator/AppData/Roaming/Tencent/Marvis/User/910CF9D8FBF963F109E2915A63F38F70/workspace/conv_c220e5e084e345aa8edd6702582cebba/output/WIE_v3.3_N-7终局裁定_路径2扫描与路径3修订.md) |
+| 1 | `WIE_v3.3_论文手稿_复验修订版.md` | 复验修订版论文手稿（含附录 A 完整复验明细） | [查看](https://github.com/wugaungheng/IRE-AGI-v7.0/blob/main/WIE_Verification/manuscripts/v3_recast/WIE_v3.3_论文手稿_复验修订版.md) |
+| 2 | `WIE_v3.3_与其他统一方程对比分析报告_20261009.md` | WIE v3.3 与 WGE、MSTG、String Theory 对比分析 | [查看](https://github.com/wugaungheng/IRE-AGI-v7.0/blob/main/WIE_Verification/reports/WIE_v3.3_与其他统一方程对比分析报告_20261009.md) |
+| 3 | `WIE_开源验证方法_v1.0.md`（本文件） | 本文档，开源验证方法方案 | [查看](https://github.com/wugaungheng/IRE-AGI-v7.0/blob/main/WIE_Verification/reports/WIE_开源验证方法_v1.0.md) |
+| 4 | `WIE_v3.3_复验证据.json` | 复验证据数据（24 项完整记录，含数值/判定/误差） | [查看](https://github.com/wugaungheng/IRE-AGI-v7.0/blob/main/WIE_Verification/evidence/WIE_v3.3_复验证据.json) |
+| 5 | `WIE_撤回登记表.md` | WIE 预言撤回登记表（含 P1 注销条目） | [查看](https://github.com/wugaungheng/IRE-AGI-v7.0/blob/main/WIE_Verification/manuscripts/v3_recast/WIE_撤回登记表.md) |
+| 6 | `WIE_v3.3_N-7终局裁定_路径2扫描与路径3修订.md` | v3.3 终局裁定：路径 2 扫描 + 路径 3 修订 | [查看](https://github.com/wugaungheng/IRE-AGI-v7.0/blob/main/WIE_Verification/manuscripts/v3_recast/WIE_v3.3_N-7终局裁定_路径2扫描与路径3修订.md) |
 
 ---
 
-*本文档基于 WIE v3.3 落地修订稿、终局裁定、撤回登记表及 WIE v3.3 论文手稿（复验修订版）生成，核心内容完整引用手稿 v3.3。验证脚本模板开源在 `wie-verify-tools` 仓库，数据下载链接见 §5.1 和 §8.2。*
+*本文档基于 WIE v3.3 落地修订稿、终局裁定、撤回登记表及 WIE v3.3 论文手稿（复验修订版）生成，核心内容完整引用手稿 v3.3。验证脚本模板开源在 IRE-AGI-v7.0 仓库的 `WIE_Verification/scripts/` 目录，数据下载链接见 §5.1 和 §8.2。*
 
 *武光衡；辅助：武光衡智能体 × 马维斯智能体*
-*（内容由AI生成，仅供参考）*
